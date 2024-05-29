@@ -1,0 +1,57 @@
+@import '../../pages/Root.module.scss';
+#footer {
+    background-color: #006241;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    position: fixed;
+    height: 200px;
+    bottom: 0;
+    .footerNavigation, .footerContact {
+      margin: 10px;
+  
+      h3 {
+        color: #f0f0f0;
+        margin-bottom: 15px;
+      }
+  
+      ul {
+        list-style: none;
+        padding: 0;
+  
+        li {
+          margin-bottom: 10px;
+          transition: transform 0.2s ease-in-out;
+  
+          a {
+            color: #ffffff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  
+    .footerLogo {
+      img {
+        max-width: 100px;
+        height: auto;
+        margin-top: 20px;
+      }
+    }
+  
+    @media (max-width: 600px) {
+      flex-direction: column;
+      align-items: center;
+  
+      .footerLogo {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
