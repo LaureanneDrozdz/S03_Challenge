@@ -1,27 +1,27 @@
-name : Deploy to Surge when push on master
+name: Deploy to Surge when push on master
 
 on:
   push:
     branches:
       - master
-      
-  jobs:  
 
-    build_and_deploy : 
-      environment: production
-      runs-on: ubuntu-latest
-      defaults:
+jobs:
+  build_and_deploy:
+    environment: production
+    runs-on: ubuntu-latest
+    defaults:
+      run:
         shell: bash
         working-directory: ./projet/front-end
 
-      steps : 
+    steps:
       - name: Fetch code from repo
-        uses: actions/checkout@v4   
+        uses: actions/checkout@v4
 
-      - name : Install dependencies
-        run : npm ci
+      - name: Install dependencies
+        run: npm ci
 
       - name: Deploy code
         run: |
-          npm i -g surge
+          npm install -g surge
           surge --project ./dist --domain ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}
