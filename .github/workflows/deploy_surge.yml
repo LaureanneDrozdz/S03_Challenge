@@ -12,7 +12,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ./projet/front-end
+        working-directory: ./projet/frontend
 
     steps:
       - name: Fetch code from repo
