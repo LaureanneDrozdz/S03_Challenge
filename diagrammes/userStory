@@ -1,0 +1,12 @@
+En tant qu'utilisateur je souhaite parcourir la liste des produits triés par catégories
+
+En tant qu'utilisateur, je peux voir les informations de mon panier
+En tant qu'utilisateur, je peux voir les détail d'un produit
+En tant qu'utilisateur, je peux choisir la quantité d'un produit et l'ajouter à mon panier
+En tant qu'utilisateur, je peux supprimer les produits de mon panier
+En tant qu'utilisateur, je peux valider mon panier
+En tant qu'utilisateur, je peux rentrer les informations pour la livraison et valider la commande
+En tant qu'administrateur, je souhaite pouvoir voir les commandes en cours 
+En tant qu'administrateur, je souhaite me connecter au Back Office afin de gérer les produits
+En tant qu'administrateur, je souhaite supprimer les produits du catalogue ( BO)
+En tant qu'administrateur, je souhaite ajouter un produit au catalogue (BO)

@@ -1,0 +1,30 @@
+@startuml
+start
+
+:Liste des produits;
+:Selection d'un produit;
+:Ajout Quantité;
+:Ajout au panier;
+
+while (Satisfait ?) is (Non)
+  :Edite son panier;
+  :Ajoute/Modifie/Supprime des produits;
+  :Ajout au panier;
+  if (Panier vide ?) then (Oui)
+    stop
+  else (Non)
+    :Retour à "Selection d'un produit";
+  endif
+endwhile
+
+if (Panier rempli ?) then (Oui)
+  :Valide son panier;
+  :Renseigne ses informations;
+  :Valide sa commande;
+  stop
+else (Non)
+  :Retour à "Ajout au panier";
+endif
+
+stop
+@enduml

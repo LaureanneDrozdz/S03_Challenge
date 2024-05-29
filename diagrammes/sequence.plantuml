@@ -1,0 +1,9 @@
+@startuml
+Customer -> "cartController" as C : 1: Ajouter au panier
+C -> "Produit" as P : 1.1 : addToCart(product_id, qte)
+C -->  : 1.2 : Ajout au panier
+C--> Afficher le panier modifié
+C ->  2.1 : render(products)
+VueCart --> P : 2.2: renderView
+
+@enduml

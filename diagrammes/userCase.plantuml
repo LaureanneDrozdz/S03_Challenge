@@ -1,0 +1,34 @@
+@startuml
+actor Utilisateur as u
+actor Administrateur as 
+
+package "Système de Réservation" {
+  usecase "Parcourir la liste des produits" as UC1
+  usecase "Voir les détails d'un produit" as UC2
+  usecase "Sélectionner la quantité d'un produit et l'ajouter à mon panier" as UC3
+  usecase "Vider mon panier" as UC5
+  usecase "Voir mon panier" as UC6
+  usecase "Modifier mon panier" as UC7
+  usecase "Valider mon panier" as UC8
+  usecase "Renseigner mes informations pour la livraison" as UC9
+  usecase "Valider ma commande" as UC10
+  usecase "Me connecter au Back Office" as UC11
+  usecase "Voir les informations des commandes en cours dans le BO" as UC12
+  usecase "Supprimer une commande lorsqu'elle est terminé" as UC14
+  usecase "Gérer les produits dans le BO" as UC13 
+}
+
+u --> UC1
+u --> UC2
+u --> UC3
+u --> UC6
+u --> UC6 -->UC7
+u --> UC6 --> UC8
+U--> UC6--> UC5
+u --> UC8--> UC9
+u --> UC9--> UC10
+a--> UC11
+a--> UC12
+a--> UC14
+a--> UC13
+@enduml

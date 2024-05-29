@@ -1,0 +1,54 @@
+@startuml erd
+hide circle
+skinparam linetype ortho
+entity "Admin" as admin {
+*id : int
+--
+*email : string
+*password : string
+}
+entity "Customer" as cust {
+*id : int
+--
+*l_name : string
+*f_name : string
+*l_name : string
+*adress : string
+*tel : string
+}
+entity "Product" as prod {
+*id : int
+--
+*name : string
+*description : string
+categorie_id : int
+images : array 
+}
+
+entity "Cart" as cart{
+    *id : int
+    --
+    *customer_id : int
+    *product_id : int
+    *product_quantity : int 
+
+}
+
+entity "Order" as order{
+    *id : int
+    --
+    *customer_id : int
+    *cart_id : int
+    }
+entity "Categorie" as cat{
+    *id : int 
+    -- 
+    *name
+}    
+prod ||..o{ cat
+cust ||..|| cart
+prod }o..o{ cart
+order ||..|| cust
+order ||..||cart
+
+@enduml
