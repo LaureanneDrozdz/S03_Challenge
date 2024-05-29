@@ -9,6 +9,6 @@ export default defineConfig({
     watch: {
       usePolling: true
     },
-    base: '/S03_Challenge'
+    base: '/S03_Challenge/'
   }
 })
