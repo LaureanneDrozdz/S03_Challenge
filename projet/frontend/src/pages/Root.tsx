@@ -1,7 +1,5 @@
-import { Outlet, useLocation } from "react-router-dom"
+import { Outlet } from "react-router-dom"
 import Footer from "../components/Footer/Footer"
-import logo from "../assets/CW-logo.svg"
-import Navbar from "../components/Navbar/Navbar"
 import styles  from './Root.module.scss'
 function Root() {
 
