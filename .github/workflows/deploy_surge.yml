@@ -21,7 +21,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build
+        run: npm run build
+
       - name: Deploy code
         run: |
           npm install -g surge
-          surge --project /dist --domain ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}
+          surge --project ./projet/frontend/dist --domain ${{secrets.SURGE_DOMAIN}} --token ${{secrets.SURGE_TOKEN}}
